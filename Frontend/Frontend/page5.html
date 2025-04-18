@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Look AI - Emotionally Intelligent</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fffdeb;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-wrapper {
+      max-width: 1100px;
+      padding: 100px 20px 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 80px 60px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card img {
+      width: 170px;
+      height: 110px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 16px;
+    }
+
+    .plan { background-color: #cceeff; color: #004b6b; }
+    .emotion { background-color: #ffe4bd; color: #a05a00; }
+    .diet { background-color: #d4f6dd; color: #0f4d32; }
+    .habit { background-color: #e6ffe8; color: #2e7d32; }
+    .relation { background-color: #f3e4ff; color: #6a1b9a; }
+
+    .center-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    .center-logo img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .center-logo h2 {
+      font-size: 16px;
+      line-height: 1.4;
+      margin: 0;
+      color: #333;
+    }
+
+    .next-btn {
+  background-color: #4b0082; /* Deep violet */
+  color: white;
+  padding: 14px 50px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 40px auto 20px;
+  display: block;
+}
+
+.next-btn:hover {
+  background-color: #6a0dad;
+  transform: translateY(-2px);
+}
+
+
+    .login {
+      font-size: 14px;
+      text-decoration: underline;
+      color: #444;
+      cursor: pointer;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .main-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 20px 20px;
+      }
+
+      .center-logo {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-wrapper">
+    <!-- Top Row -->
+    <div class="card">
+      <img src="5.png" alt="Plan a trip" />
+      <div class="label plan">Plan a trip</div>
+    </div>
+    <div class="card">
+      <img src="2.png" alt="Look emotions" />
+      <div class="label emotion">Look emotions</div>
+    </div>
+    <div class="card">
+      <img src="4.png" alt="Diet plan" />
+      <div class="label diet">Diet plan</div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="card">
+      <img src="3.png" alt="Create habits" />
+      <div class="label habit">Create habits</div>
+    </div>
+
+    <div class="center-logo">
+      <img src="1.png" alt="Look AI" />
+      <h2>Look AI<br>Emotionally intelligent</h2>
+    </div>
+
+    <div class="card">
+      <img src="6.png" alt="Relationship advice" />
+      <div class="label relation">Relationship advice</div>
+    </div>
+  </div>
+
+  <button class="next-btn" onclick="window.location.href='explore.html'">Next</button>
+
+</body>
+</html>

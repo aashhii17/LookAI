@@ -1,0 +1,214 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header {
+    background-color: #333;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-left img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 200px;
+    display: none;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.chat-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.message {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    line-height: 1.4;
+    font-size: 16px;
+    position: relative;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #000000;
+    border-top-left-radius: 4px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #128c7e;
+    color: #ffffff;
+    border-top-right-radius: 4px;
+}
+
+.input-container {
+    display: flex;
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    position: sticky;
+    bottom: 0;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#message-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 24px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.input-buttons {
+    display: flex;
+    margin-left: 10px;
+    gap: 8px;
+}
+
+.input-btn {
+    background-color: #128c7e;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.input-btn:hover {
+    background-color: #0e786c;
+}
+
+.typing-indicator {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #666666;
+    padding: 8px 16px;
+    border-radius: 18px;
+    display: none;
+    max-width: 120px;
+    font-style: italic;
+}
+
+.typing-indicator:after {
+    content: '...';
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* -------------------------- */
+/* 🌙 DARK MODE STYLING HERE */
+/* -------------------------- */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+  }
+  
+  body.dark-mode .header,
+  body.dark-mode .dropdown-menu {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode .dropdown-menu a,
+  body.dark-mode .dropdown-item {
+    color: #eee;
+  }
+  
+  body.dark-mode .dropdown-menu a:hover,
+  body.dark-mode .dropdown-item:hover {
+    background-color: #333;
+  }
